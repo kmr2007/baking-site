@@ -1,0 +1,57 @@
+html {
+  background: url("img/bg.jpg") no-repeat center fixed;
+  background-size: cover;
+}
+body {
+  font-family: "Times New Roman", Times, serif;
+}
+.main-content {
+  width: 600px;
+  height: 1200px;
+  margin: 25px auto;
+  font-family: "Times New Roman", Times, serif;
+  background-color: rgba(255, 255, 255, 0.562);
+  padding: 0px;
+}
+.center {
+  text-align: center;
+}
+.italics {
+  font-style: italic;
+}
+.bold {
+  font-weight: bold;
+}
+h1 {
+  font-size: 50px;
+  text-decoration: underline;
+}
+img {
+  width: 150px;
+  height: 150px;
+}
+.img-al {
+  float: left;
+}
+p {
+  font-family: sans-serif;
+}
+.topnav {
+  background-color: white;
+  height: 50px;
+  text-align: center;
+}
+.topnav a {
+  color: deepskyblue;
+  text-align: center;
+  padding: 30px;
+  text-decoration: none;
+  font-size: 30px;
+}
+.topnav a:hover {
+  text-decoration: underline;
+}
+.topnav a:active {
+  background-color: rgb(145, 144, 144);
+  color: white;
+}
