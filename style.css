@@ -22,6 +22,9 @@ body {
 .bold {
   font-weight: bold;
 }
+.underline {
+  text-decoration: underline;
+}
 h1 {
   font-size: 50px;
   text-decoration: underline;
@@ -54,4 +57,11 @@ p {
 .topnav a:active {
   background-color: rgb(145, 144, 144);
   color: white;
+}
+
+.correct {
+  color: green;
+}
+.incorrect {
+  color: red;
 }
