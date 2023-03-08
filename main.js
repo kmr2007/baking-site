@@ -1,13 +1,16 @@
 // Quiz
 
-//Global Variables
-let QuestionsCorrect = 0;
-
-//Event Listeners
+//Event Listener
 document.getElementById("btn").addEventListener("click", btnClicked);
 
-//Functions
+//Function
 function btnClicked() {
+  //Variables
+  let q1El = document.getElementById("q1");
+  let q2El = document.getElementById("q2");
+  let q3El = document.getElementById("q3");
+  let q4El = document.getElementById("q4");
+  let q5El = document.getElementById("q5");
   let q1Response = document.getElementById("q1-in").value.toLowerCase();
   let q2B = document.getElementById("q2-b");
   let q3ResponseA = document.getElementById("q3-a").value.toLowerCase();
@@ -15,19 +18,33 @@ function btnClicked() {
   let q3ResponseC = document.getElementById("q3-c").value.toLowerCase();
   let q4Response = document.getElementById("q4-in").value.toLowerCase();
   let q5Response = document.getElementById("q5-in").value.toLowerCase();
+  let QuestionsCorrect = 0;
+
+  //Clear Previous Attempt
+  q1El.classList.remove("correct");
+  q1El.classList.remove("incorrect");
+  q2El.classList.remove("correct");
+  q2El.classList.remove("incorrect");
+  q3El.classList.remove("correct");
+  q3El.classList.remove("incorrect");
+  q4El.classList.remove("correct");
+  q4El.classList.remove("incorrect");
+  q5El.classList.remove("correct");
+  q5El.classList.remove("incorrect");
+
   // Question 1
   if (q1Response === "ancient rome" || q1Response === "rome") {
     ++QuestionsCorrect;
-    document.getElementById("q1").classList.add("correct");
+    q1El.classList.add("correct");
   } else {
-    document.getElementById("q1").classList.add("incorrect");
+    q1El.classList.add("incorrect");
   }
   // Question 2
   if (q2B.checked) {
-    document.getElementById("q2").classList.add("correct");
+    q2El.classList.add("correct");
     ++QuestionsCorrect;
   } else {
-    document.getElementById("q2").classList.add("incorrect");
+    q2El.classList.add("incorrect");
   }
   // Question 3
   if (
@@ -44,25 +61,25 @@ function btnClicked() {
     q3ResponseA !== q3ResponseC &&
     q3ResponseB !== q3ResponseC
   ) {
-    document.getElementById("q3").classList.add("correct");
+    q3El.classList.add("correct");
     ++QuestionsCorrect;
   } else {
-    document.getElementById("q3").classList.add("incorrect");
+    q3El.classList.add("incorrect");
   }
   // Question 4
   if (q4Response === "giselle courteau" || q4Response === "giselle") {
-    document.getElementById("q4").classList.add("correct");
+    q4El.classList.add("correct");
     ++QuestionsCorrect;
   } else {
-    document.getElementById("q4").classList.add("incorrect");
+    q4El.classList.add("incorrect");
   }
 
   // Question 5
   if (q5Response === "nanaimo bars" || q5Response === "nanaimo bar") {
-    document.getElementById("q5").classList.add("correct");
+    q5El.classList.add("correct");
     ++QuestionsCorrect;
   } else {
-    document.getElementById("q5").classList.add("incorrect");
+    q5El.classList.add("incorrect");
   }
 
   // Results
