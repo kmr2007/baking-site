@@ -16,6 +16,8 @@ body {
 .center {
   text-align: center;
 }
+
+/* Text Styles */
 .italics {
   font-style: italic;
 }
@@ -29,6 +31,10 @@ h1 {
   font-size: 50px;
   text-decoration: underline;
 }
+p {
+  font-family: sans-serif;
+}
+/* Images */
 img {
   width: 150px;
   height: 150px;
@@ -36,9 +42,7 @@ img {
 .img-al {
   float: left;
 }
-p {
-  font-family: sans-serif;
-}
+/* Navigation bar */
 .topnav {
   background-color: white;
   height: 50px;
@@ -59,6 +63,7 @@ p {
   color: white;
 }
 
+/* Correct/Incorrect */
 .correct {
   color: green;
 }

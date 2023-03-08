@@ -9,6 +9,7 @@ document.getElementById("btn").addEventListener("click", btnClicked);
 //Functions
 function btnClicked() {
   let q1Response = document.getElementById("q1-in").value.toLowerCase();
+  let q2B = document.getElementById("q2-b");
   let q3ResponseA = document.getElementById("q3-a").value.toLowerCase();
   let q3ResponseB = document.getElementById("q3-b").value.toLowerCase();
   let q3ResponseC = document.getElementById("q3-c").value.toLowerCase();
@@ -22,7 +23,7 @@ function btnClicked() {
     document.getElementById("q1").classList.add("incorrect");
   }
   // Question 2
-  if (document.getElementById("q2-b").checked) {
+  if (q2B.checked) {
     document.getElementById("q2").classList.add("correct");
     ++QuestionsCorrect;
   } else {
@@ -65,7 +66,14 @@ function btnClicked() {
   }
 
   // Results
-  document.getElementById(
-    "output"
-  ).innerHTML = `${QuestionsCorrect}/5! Refresh to try again.`;
+  let percentCorrect = (QuestionsCorrect / 5) * 100;
+  if (percentCorrect > 50) {
+    document.getElementById(
+      "output"
+    ).innerHTML = `${QuestionsCorrect}/5 (${percentCorrect}%) Great Job!`;
+  } else {
+    document.getElementById(
+      "output"
+    ).innerHTML = `${QuestionsCorrect}/5 (${percentCorrect}%) Good try! Refresh to try again.`;
+  }
 }
