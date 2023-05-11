@@ -111,3 +111,18 @@ function giveUpBtnClicked() {
   document.getElementById("q4-in").value = "Giselle Courteau";
   document.getElementById("q5-in").value = "Nanaimo Bars";
 }
+
+// Sticky Nav Bar
+window.onscroll = function () {
+  navbarStickQuiz();
+};
+
+var navbarQuiz = document.getElementById("navbar-quiz");
+var stickyQuiz = navbarQuiz.offsetTop;
+function navbarStickQuiz() {
+  if (window.pageYOffset >= stickyQuiz) {
+    navbarQuiz.classList.add("sticky");
+  } else {
+    navbarQuiz.classList.remove("sticky");
+  }
+}

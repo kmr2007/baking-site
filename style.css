@@ -63,6 +63,16 @@ img {
   color: white;
 }
 
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .main-content {
+  padding-top: 60px;
+}
+
 /* Correct/Incorrect */
 .correct {
   color: green;
