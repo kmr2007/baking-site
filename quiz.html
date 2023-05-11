@@ -22,12 +22,15 @@
       <p>Which of the following originated in Australia?</p>
       <input type="radio" id="q2-a" name="q2" />
       <label for="q2-a">Chocolate Chip Cookies</label>
-      <input type="radio" id="q2-b" name="q2" />
+      <span id="q2B-el">
+        <input type="radio" id="q2-b" name="q2" />
+      </span>
       <label for="q2-b">Pavlova</label>
       <input type="radio" id="q2-c" name="q2" />
       <label for="q2-c">Macarons</label>
       <input type="radio" id="q2-d" name="q2" />
       <label for="q2-d">Paska</label>
+      <p id="q2-out"></p>
       <h3 id="q3">Question 3:</h3>
       <p>
         What three items are first combined in the process of creaming? Write
@@ -45,6 +48,7 @@
       </p>
       <button id="btn">Submit</button>
       <p id="output"></p>
+      <button class="hidden" id="giveUp-btn">Show me the Answers</button>
     </div>
   </body>
 </html>

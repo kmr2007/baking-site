@@ -1,9 +1,13 @@
 // Quiz
 
-//Event Listener
+//Event Listeners
 document.getElementById("btn").addEventListener("click", btnClicked);
+document
+  .getElementById("giveUp-btn")
+  .addEventListener("click", giveUpBtnClicked);
 
-//Function
+//Functions
+
 function btnClicked() {
   //Variables
   let q1El = document.getElementById("q1");
@@ -91,6 +95,19 @@ function btnClicked() {
   } else {
     document.getElementById(
       "output"
-    ).innerHTML = `${QuestionsCorrect}/5 (${percentCorrect}%) Good try! Refresh to try again.`;
+    ).innerHTML = `${QuestionsCorrect}/5 (${percentCorrect}%) Good try!`;
   }
+  document.getElementById("giveUp-btn").classList.remove("hidden");
+}
+
+function giveUpBtnClicked() {
+  document.getElementById("q1-in").value = "Rome";
+  document.getElementById(
+    "q2B-el"
+  ).innerHTML = `<input type="radio" id="q2-b" name="q2" checked />`;
+  document.getElementById("q3-a").value = "Butter";
+  document.getElementById("q3-b").value = "Sugar";
+  document.getElementById("q3-c").value = "Air";
+  document.getElementById("q4-in").value = "Giselle Courteau";
+  document.getElementById("q5-in").value = "Nanaimo Bars";
 }

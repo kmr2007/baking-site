@@ -70,3 +70,6 @@ img {
 .incorrect {
   color: red;
 }
+.hidden {
+  display: none;
+}
